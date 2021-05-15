@@ -10,33 +10,47 @@
   position: absolute;
   z-index: 1;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 
   background: rgba(0, 0, 0, 0.85);
   border: 1px solid @border-color;
   color: white;
 
+  .orca-box {
+    img {
+      border: 1px solid @border-color;
+    }
+  }
+  .number-box {
+      border-top: 1px solid @border-color;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
   h4 {
-  display: block; /* Fallback for non-webkit */
-  display: -webkit-box;
-  max-width: 400px;
-  height: @font-size*@line-height*@lines-to-show; /* Fallback for non-webkit */
-  margin: 0 auto;
-  font-size: @font-size;
-  line-height: @line-height;
-  -webkit-line-clamp: @lines-to-show;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    height: @font-size* @line-height* @lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: @font-size;
+    line-height: @line-height;
+    -webkit-line-clamp: @lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
     // overflow: hidden;
     // text-overflow: ellipsis;
+    text-align: center;
   }
   h2 {
     margin: 0;
     text-align: center;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
   }
   .small {
     text-align: center;
@@ -59,6 +73,9 @@
     a {
       font-size: @font-size;
     }
+  }
+  .ppi-number {
+    color: #90ee90;
   }
 }
 

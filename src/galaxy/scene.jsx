@@ -39,7 +39,6 @@ function scene(x) {
         <SearchBox />
         <WindowCollection />
         <Help />
-        <About />
       </div>
     );
   };
