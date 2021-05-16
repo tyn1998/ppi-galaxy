@@ -7,7 +7,7 @@ import SteeringIndicator from './steeringIndicator.jsx';
 import SearchBox from './search/searchBoxView.jsx';
 import NoWebGL from './noWebgl.jsx';
 import Help from './help.jsx';
-import About from './about.jsx';
+// import About from './about.jsx';
 
 import WindowCollection from './windows/windowCollectionView.jsx';
 import createNativeRenderer from './native/renderer.js';
@@ -15,6 +15,7 @@ import createKeyboardBindings from './native/sceneKeyboardBinding.js';
 
 import appEvents from './service/appEvents.js';
 
+import SpeciesDetails from './speciesDetails/speciesDetailsView.jsx';
 import PpiDetails from './ppiDetails/ppiDetailsView.jsx';
 
 var webglEnabled = require('webgl-enabled')();
@@ -34,11 +35,12 @@ function scene(x) {
         <div ref='graphContainer' className='graph-full-size'/>
         <HoverInfo />
         <NodeDetails />
-        <PpiDetails />
+        <SpeciesDetails />
+        <PpiDetails/>
         <SteeringIndicator />
         <SearchBox />
-        <WindowCollection />
         <Help />
+        <WindowCollection />
       </div>
     );
   };

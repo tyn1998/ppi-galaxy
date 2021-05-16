@@ -10,8 +10,6 @@ function detailedPpiView(x) {
   };
 
   x.render = function () {
-    console.log(x);
-
     if (!x.state.ppiDetails) return null;
     var PpiDetails = getPpiDetails();
 

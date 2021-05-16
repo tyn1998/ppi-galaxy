@@ -1,0 +1,113 @@
+@font-size: 18px;
+@line-height: 1.4;
+@lines-to-show: 2;
+
+.button-toggle {
+  top: 12px;
+  left: 16px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid @border-color;
+  padding: 0px;
+  color: white;
+  z-index: 2;
+}
+
+.species-details {
+  width: 400px;
+  top: 12px;
+  left: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 650px;
+  padding: 12px;
+  position: absolute;
+  z-index: 1;
+
+  font-family: "PT Sans", sans-serif;
+
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid @border-color;
+  color: white;
+
+  .orca-box {
+    img {
+      border: 1px solid @border-color;
+    }
+  }
+  .number {
+    color: #90ee90;
+  }
+
+  .number-box {
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+  }
+
+  .one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .taxonomy-box {
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid @border-color;
+  }
+
+  span.highlight {
+    color: #90ee90;
+  }
+  h5 {
+    text-align: center;
+  }
+
+  h4 {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    height: @font-size* @line-height* @lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: @font-size;
+    line-height: @line-height;
+    -webkit-line-clamp: @lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+    text-align: center;
+    font-family: "PT Sans", sans-serif;
+  }
+  .small {
+    text-align: center;
+    color: #999;
+  }
+
+  @media (max-width: @screen-sm-min) {
+    right: 12px;
+    width: inherit;
+    .info-block {
+      padding-left: 0;
+      a {
+        margin: 0 7px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+  .info-block {
+    a {
+      font-size: @font-size;
+    }
+  }
+}
