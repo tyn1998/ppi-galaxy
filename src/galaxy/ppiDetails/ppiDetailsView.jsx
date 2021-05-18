@@ -2,6 +2,13 @@ import React from "react";
 import detailModel from "./ppiDetailsStore.js";
 import OrcaUnit from "./orcaUnit.jsx";
 
+// 一次性import一整个目录下的.png，并通过map['xxx']来使用它们
+const ctx = require.context("./images", false, /.*\.png$/);
+let map = {};
+ctx.keys().forEach(function(key, index){
+  map[index] = ctx(key);
+});
+
 module.exports = require("maco")(detailedPpiView, React);
 
 function detailedPpiView(x) {
@@ -34,29 +41,29 @@ function detailedPpiView(x) {
     function template(props) {
       let model = props.model;
       let orcaCounts = model.orca;
-      let orcaImagesEndpoint = "http://localhost:9090/images";
+      let orcaImagesEndpoint = '/';
       return (
         <div>
           <div className="container-fluid orca-box">
             <div className="row">
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/0.png`}
+                imageSrc={map[0]}
                 orcaCount={orcaCounts[0]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/1.png`}
+                imageSrc={map[1]}
                 orcaCount={orcaCounts[1]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/2.png`}
+                imageSrc={map[2]}
                 orcaCount={orcaCounts[2]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/3.png`}
+                imageSrc={map[3]}
                 orcaCount={orcaCounts[3]}
               />
             </div>
@@ -64,22 +71,22 @@ function detailedPpiView(x) {
             <div className="row">
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/4.png`}
+                imageSrc={map[4]}
                 orcaCount={orcaCounts[4]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/5.png`}
+                imageSrc={map[5]}
                 orcaCount={orcaCounts[5]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/6.png`}
+                imageSrc={map[6]}
                 orcaCount={orcaCounts[6]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/7.png`}
+                imageSrc={map[7]}
                 orcaCount={orcaCounts[7]}
               />
             </div>
@@ -87,22 +94,22 @@ function detailedPpiView(x) {
             <div className="row">
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/8.png`}
+                imageSrc={map[8]}
                 orcaCount={orcaCounts[8]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/9.png`}
+                imageSrc={map[9]}
                 orcaCount={orcaCounts[9]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/10.png`}
+                imageSrc={map[10]}
                 orcaCount={orcaCounts[10]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/11.png`}
+                imageSrc={map[11]}
                 orcaCount={orcaCounts[11]}
               />
             </div>
@@ -110,17 +117,17 @@ function detailedPpiView(x) {
             <div className="row">
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/12.png`}
+                imageSrc={map[12]}
                 orcaCount={orcaCounts[12]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/13.png`}
+                imageSrc={map[13]}
                 orcaCount={orcaCounts[13]}
               />
               <OrcaUnit
                 classStr="col-xs-3"
-                imageSrc={`${orcaImagesEndpoint}/14.png`}
+                imageSrc={map[14]}
                 orcaCount={orcaCounts[14]}
               />
             </div>

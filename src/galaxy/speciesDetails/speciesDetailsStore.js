@@ -38,7 +38,12 @@ function speciesDetailsStore() {
       speciesDetails["clustCf"] = speciesDetails["clustCf"].toFixed(4);
       speciesDetails["density"] = speciesDetails["density"].toFixed(4);
       speciesDetails["edgeEntropy"] = speciesDetails["edgeEntropy"].toFixed(4);
-      speciesDetails["evolution"] = speciesDetails["evolution"].toFixed(4);
+      if (speciesDetails["evolution"]) {
+        // 不是每个物种都有evolution数据
+        speciesDetails["evolution"] = speciesDetails["evolution"].toFixed(4);
+      } else {
+        speciesDetails["evolution"] = '未提供';
+      }
       speciesDetails["giniCoefficient"] = speciesDetails["giniCoefficient"].toFixed(4);
       speciesDetails["globalClustering"] = speciesDetails["globalClustering"].toFixed(4);
       speciesDetails["starDensity2"] = speciesDetails["starDensity2"].toFixed(6);
