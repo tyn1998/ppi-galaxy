@@ -3,6 +3,7 @@ import detailModel from "./speciesDetailsStore.js";
 import DegreesScatter from "./degreesScatter.jsx";
 import LorenzLine from "./lorenzLine.jsx";
 import Taxonomy from "./taxonomyView.jsx";
+import ResilienceTable from "./resilienceTableView.jsx";
 
 module.exports = require("maco")(speciesView, React);
 
@@ -24,7 +25,9 @@ function speciesView(x) {
     let s = x.state.speciesDetails;
     return (
       <div>
-          <button className="button-toggle" onClick={toggleVisibility}>{x.state.visibility == 'visible' ? '隐' : '显'}</button>
+        <button className="button-toggle" onClick={toggleVisibility}>
+          {x.state.visibility == "visible" ? "隐" : "显"}
+        </button>
         <div
           className="species-details"
           style={{ visibility: x.state.visibility }}
@@ -44,6 +47,12 @@ function speciesView(x) {
               </div>
               <div className="col-xs-7">
                 <span className="highlight">Pub_Count:</span> {s.pubCount}
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-xs-12">
+                <ResilienceTable resilience={s.resilience} />
               </div>
             </div>
           </div>

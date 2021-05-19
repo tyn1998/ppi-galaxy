@@ -42,30 +42,49 @@ h4 {
   background-color: rgba(0, 0, 0, 0.8);
   color: #7f7f7f;
   position: absolute;
+  z-index: 2;
 }
 
 .window-list-content {
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: 110px;
+  max-height: 250px;
 }
-
+.window-list-content::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+  // scrollbar-arrow-color: red;
+}
+.window-list-content::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.8);
+  // scrollbar-arrow-color: red;
+}
+.window-list-content::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
 .node-focus {
   cursor: pointer;
 }
 
 .search-results-window {
   right: 16px;
-  top: 47px;
+  top: 50px;
   padding: 10px;
-  width: 395px;
+  width: 400px;
 }
 
 .degree-results-window {
   left: 16px;
   bottom: 87px;
-  padding: 10px;
-  width: 395px;
+  padding-left: 10px;
+  width: 400px;
 }
 
 .no-overflow {
