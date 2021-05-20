@@ -1,34 +1,26 @@
 {
-  "name": "pmviz",
+  "name": "ppi-galaxy",
   "version": "1.0.0",
-  "description": "Visualization of common package managers",
+  "description": "Visualization of protein-protein interactions.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p ./build && cp ./src/index.html ./build/ && webpack -p --config webpack.production.config.js",
     "start": "PORT=8081 node dev-server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/anvaka/pm.git"
+    "url": "https://github.com/tyn1998/ppi-galaxy.git"
   },
   "keywords": [
     "ngraph",
-    "visualization",
-    "package",
-    "managers",
-    "npm",
-    "bower",
-    "cpan",
-    "composer",
-    "go"
+    "visualization"
   ],
-  "author": "Andrei Kashcha",
+  "author": "Andrei Kashcha/tyn1998",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anvaka/pm/issues"
+    "url": "https://github.com/tyn1998/ppi-galaxy/issues"
   },
-  "homepage": "https://github.com/anvaka/pm",
+  "homepage": "https://github.com/tyn1998/ppi-galaxy",
   "devDependencies": {
     "express": "^4.12.3",
     "ngraph.generators": "0.0.15",

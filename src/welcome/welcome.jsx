@@ -4,7 +4,7 @@ import Tree from "./treeView.jsx";
 import { destinationArr } from "./destination";
 
 // 一次性import一整个目录下的.png，并通过map['xxx']来使用它们
-const ctx = require.context("./screenshots", false, /.*\.png$/);
+const ctx = require.context("./previewImages", false, /.*\.png$/);
 let map = {};
 ctx.keys().forEach(function(key, index){
   let id = key.slice(key.indexOf('/')+1, key.indexOf('.png'))
