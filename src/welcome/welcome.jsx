@@ -3,6 +3,14 @@ import Destination from "./destinationView.jsx";
 import Tree from "./treeView.jsx";
 import { destinationArr } from "./destination";
 
+// 一次性import一整个目录下的.png，并通过map['xxx']来使用它们
+const ctx = require.context("./screenshots", false, /.*\.png$/);
+let map = {};
+ctx.keys().forEach(function(key, index){
+  let id = key.slice(key.indexOf('/')+1, key.indexOf('.png'))
+  map[id] = ctx(key);
+});
+
 export default class WelcomePage extends React.Component {
   render() {
     return (
@@ -19,16 +27,17 @@ export default class WelcomePage extends React.Component {
             marginTop: "100px",
             marginLeft: "100px",
             marginRight: "100px",
+            padding: "10px",
             border: "1px solid #ff008c",
           }}
         >
           {destinationArr.map((item) => {
             return (
               <Destination
-                description={`Interactomes ${item.speciesID}`}
+                description={`[${item.speciesID}] ${item.ncibName}.`}
                 href={`#/galaxy/${item.speciesID}?l=1`}
-                media=""
-                name={item.speciesID}
+                imgUrl={map[item.speciesID]}
+                name={item.chineseName}
               />
             );
           })}
