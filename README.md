@@ -6,24 +6,30 @@ This visualization project is a part of [my-graduation-project](https://github.c
 
 # Screenshots
 
-- welcome page
+- Welcome Page
 
 ![welcomePage](./screenshots/welcomePage.png)
 
-- galaxy page
+- Galaxy Page
 
 ![galaxyPage](./screenshots/galaxyPage.png)
+
+- Compare Page
+
+![comparePage](./screenshots/comparePage.png)
 
 # Feature
 
 - Interactive
   - welcome page
     - scroll down and there is a mini [tree of life](https://en.wikipedia.org/wiki/Tree_of_life), double click 
-      the end node of a certain branch to jump to its galaxy page
+      the end node of a certain branch to visit corresponding galaxy page
   - galaxy page
     - use keyboard and mouse to explore the galaxy
     - search nodes by name and click to locate
     - click a node and all linked nodes are shown in a list
+  - compare page
+    - double click node in scatter chart to visit corresponding galaxy page
 - Rich statistics
   - species information (left-top corner box)
   - node information (right-bottom box)
