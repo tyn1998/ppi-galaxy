@@ -41,7 +41,6 @@ function detailedPpiView(x) {
     function template(props) {
       let model = props.model;
       let orcaCounts = model.orca;
-      let orcaImagesEndpoint = '/';
       return (
         <div>
           <div className="container-fluid orca-box">

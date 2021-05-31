@@ -53,6 +53,7 @@ function speciesView(x) {
             <div className="row">
               <div className="col-xs-12">
                 <ResilienceTable resilience={s.resilience} />
+                <a target="_blank" href={`#/compare/${s.id}`}>See more details</a>
               </div>
             </div>
           </div>
